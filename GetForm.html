@@ -3,33 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/Style.css">
     <title>Ellipse Parameters</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-		<h1>Input your Ellipse Specifications</h1>
-	</header>
+        <h1>Ellipse Parameters</h1>
+    </header>
     <nav>
-		<ul>
-			<li><a href="index(3).html">Home</a></li>
-			<li><a href="getForm.html">Draw Ellipse</a></li>
-		</ul>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="GetForm.html">Ellipse Builder</a></li>
+        </ul>
     </nav>
-	
     <main>
-		<section>
-			<h2>Ellipse Parameters</h2>
-			<form action="response.html" method="GET">
-			<label for="major">Major Axis Length:</label>
-            <input type="text" id="major" name="major" required><br><br>
-            <label for="minor">Minor Axis Length:</label>
-            <input type="text" id="minor" name="minor" required><br><br>
-            <button type="submit" value="Submit">
+        <form action="Response.html" method="get">
+            <label for="majorAxis">Major Axis:</label>
+            <input type="text" id="majorAxis" name="majorAxis" required>
+            <br>
+            <label for="minorAxis">Minor Axis:</label>
+            <input type="text" id="minorAxis" name="minorAxis" required>
+            <br>
+            <button type="submit">Submit</button>
         </form>
     </main>
     <footer>
-        <a href="https://en.wikipedia.org/wiki/Ellipse">Learn more about ellipses</a>
+        <a href="https://en.wikipedia.org/wiki/Ellipse" target="_blank">Learn more about ellipses</a>
     </footer>
 </body>
 </html>

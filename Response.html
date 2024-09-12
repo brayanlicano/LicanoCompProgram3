@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ellipse Result</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function drawEllipse() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const majorAxis = parseInt(urlParams.get('majorAxis'));
+            const minorAxis = parseInt(urlParams.get('minorAxis'));
+
+            document.getElementById('majorAxisValue').textContent = majorAxis;
+            document.getElementById('minorAxisValue').textContent = minorAxis;
+
+            const canvas = document.getElementById('ellipseCanvas');
+            const ctx = canvas.getContext('2d');
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.beginPath();
+            ctx.ellipse(150, 75, majorAxis, minorAxis, 0, 0, 2 * Math.PI);
+            ctx.stroke();
+        }
+    </script>
+</head>
+<body onload="drawEllipse()">
+    <header>
+        <h1>Result</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home Page</a></li>
+            <li><a href="GetForm.html">New Ellipse</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div>
+            <p>Major Axis: <span id="majorAxisValue"></span></p>
+            <p>Minor Axis: <span id="minorAxisValue"></span></p>
+            <canvas id="ellipseCanvas" width="300" height="150"></canvas>
+        </div>
+        <aside>
+            <img src="images/earth.jpg" alt="Earth" style="width:100px;">
+        </aside>
+    </main>
+    <footer>
+        <a href="https://en.wikipedia.org/wiki/Ellipse" target="_blank">Learn more about ellipses</a>
+    </footer>
+</body>
+</html>
